@@ -6,7 +6,10 @@
   let heading-font = "FZXiaoBiaoSong-B05"
   let caption-font = "FZKai-Z03"
   let header-font = "FZKai-Z03"
-  let raw-font = "FZFangSong-Z02"
+  let strong-font = "FZHei-B01"
+  let emph-font = "FZKai-Z03"
+  let raw-font-cn = "FZFangSong-Z02"
+  let raw-font-en = "DejaVu Sans Mono for Powerline"
   
   set document(author: authors, title: title)
   set page(numbering: "1", number-align: center, header: align(left)[
@@ -63,16 +66,14 @@
     #v(12pt)
   ]
   show table: it => [
-    #v(12pt)
     #set text(font: body-font)
     #it
-    #v(12pt)
   ]
-  show strong: set text(font: "FZHei-B01")
-  show emph: set text(font: "FZKai-Z03")
+  show strong: set text(font: strong-font)
+  show emph: set text(font: emph-font)
   show ref: set text(red)
-  show raw: set text(font: "DejaVu Sans Mono for Powerline")
-  show raw: set text(font: raw-font)
+  show raw: set text(font: raw-font-en)
+  show raw: set text(font: raw-font-cn)
 
   body
 }
