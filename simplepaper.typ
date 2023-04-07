@@ -8,8 +8,7 @@
   let header-font = "FZKai-Z03"
   let strong-font = "FZHei-B01"
   let emph-font = "FZKai-Z03"
-  let raw-font-cn = "FZFangSong-Z02"
-  let raw-font-en = "DejaVu Sans Mono for Powerline"
+  let raw-font = "DejaVu Sans Mono"
   
   set document(author: authors, title: title)
   set page(numbering: "1", number-align: center, header: align(left)[
@@ -33,7 +32,7 @@
     #v(0.5em)
     #set align(center)
     #it
-    #v(0.5em)
+    #v(0.75em)
   ]
 
   // Title
@@ -72,8 +71,9 @@
   show strong: set text(font: strong-font)
   show emph: set text(font: emph-font)
   show ref: set text(red)
-  show raw: set text(font: raw-font-en)
-  show raw: set text(font: raw-font-cn)
+  show raw: set text(font: raw-font)
+  show link: underline
+  show link: set text(blue)
 
   body
 }
