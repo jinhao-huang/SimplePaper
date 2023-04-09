@@ -1,14 +1,19 @@
 #let project(title: "", authors: (), body) = {
+  let song = "FZShuSong-Z01"
+  let hei = "FZHei-B01"
+  let kai = "FZKai-Z03"
+  let xbsong = "FZXiaoBiaoSong-B05"
+  let code = "DejaVu Sans Mono"
   // Moidfy the following to change the font.
-  let title-font = "FZHei-B01"
-  let author-font = "FZKai-Z03"
-  let body-font = "FZShuSong-Z01"
-  let heading-font = "FZXiaoBiaoSong-B05"
-  let caption-font = "FZKai-Z03"
-  let header-font = "FZKai-Z03"
-  let strong-font = "FZHei-B01"
-  let emph-font = "FZKai-Z03"
-  let raw-font = "DejaVu Sans Mono"
+  let title-font = hei
+  let author-font = kai
+  let body-font = song
+  let heading-font = xbsong
+  let caption-font = kai
+  let header-font = kai
+  let strong-font = hei
+  let emph-font = kai
+  let raw-font = code
   
   set document(author: authors, title: title)
   set page(numbering: "1", number-align: center, header: align(left)[
