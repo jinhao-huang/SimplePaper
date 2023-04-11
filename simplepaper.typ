@@ -1,4 +1,10 @@
-#let project(title: "", authors: (), body) = {
+#let project(
+  title: "",
+  authors: (),
+  abstract: none,
+  keywords: (),
+  body
+) = {
   let song = "FZShuSong-Z01"
   let hei = "FZHei-B01"
   let kai = "FZKai-Z03"
@@ -79,6 +85,16 @@
   show raw: set text(font: raw-font)
   show link: underline
   show link: set text(blue)
+
+  if abstract != none [
+    #v(2pt)
+    #h(2em) *摘要：* #abstract
+
+    #if keywords!= () [
+      *关键字：* #keywords.join("；")
+    ]
+    #v(2pt)
+  ]
 
   body
 }
