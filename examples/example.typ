@@ -68,3 +68,17 @@ raw text 中的中文字体可能较小，这是因为 Typst 无法为不同的�
   ),
   caption: "示例表格"
 )
+
+== 代码
+
+我们为代码添加了如下简单的样式。
+
+```c
+#include <stdio.h>
+int main()
+{
+   // printf() 中字符串需要引号
+   printf("Hello, World!");
+   return 0;
+}
+```

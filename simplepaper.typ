@@ -83,7 +83,13 @@
   show strong: set text(font: strong-font)
   show emph: set text(font: emph-font)
   show ref: set text(red)
-  show raw: set text(font: raw-font)
+  show raw.where(block: true): block.with(
+    width: 100%,
+    fill: luma(240),
+    inset: 10pt,
+  )
+
+  show raw: set text(font: (raw-font, hei), size: 10pt)
   show link: underline
   show link: set text(blue)
 
@@ -98,4 +104,25 @@
   ]
 
   body
+}
+#let problem-counter = counter("problem")
+#problem-counter.step()
+
+#let problem(body) = {
+  problem-counter.step()
+  set enum(numbering: "(1)")
+  block(
+    fill: rgb(241, 241, 255),
+    inset: 8pt,
+    radius: 2pt,
+    width: 100%,
+  )[*题目 #problem-counter.display().* #h(0.75em) #body]
+}
+
+#let solution(body) = {
+  set enum(numbering: "(1)")
+  block(
+    inset: 8pt,
+    width: 100%
+  )[*解答.* #h(0.75em) #body]
 }
