@@ -74,8 +74,15 @@
     #v(12pt)
     #set text(font: caption-font)
     #it
+    #par()[#text(size: 0.0em)[#h(0.0em)]]
     #v(12pt)
   ]
+
+  show image: it => [
+    #it
+    #par()[#text(size: 0.0em)[#h(0.0em)]]
+  ]
+
   show table: it => [
     #set text(font: body-font)
     #it
