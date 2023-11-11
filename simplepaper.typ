@@ -27,12 +27,12 @@
     #title
   ])
   set heading(numbering: "1.1")
-  set text(font: body-font, lang: "zh")
+  set text(font: body-font, lang: "zh", region: "cn")
   
   show heading: it => box(width: 100%)[
     #v(0.50em)
     #set text(font: heading-font)
-    #counter(heading).display()
+    #if it.numbering != none { counter(heading).display() }
     #h(0.75em)
     #it.body
 ]
