@@ -15,7 +15,7 @@
 
 = 模版简介
 
-SimplePaper 是 Typst 的模版，用于生成简单的论文。
+SimplePaper#cite(<SimplePaper>) 是 Typst 的模版，用于生成简单的论文。
 
 = 使用说明
 
@@ -84,3 +84,5 @@ int main()
    return 0;
 }
 ```
+
+#bibliography("ref.bib")
