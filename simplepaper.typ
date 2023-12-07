@@ -28,7 +28,7 @@
   ])
   set heading(numbering: "1.1")
   set text(font: body-font, lang: "zh", region: "cn")
-  set bibliography(style: "gb-7114-2015-numeric")
+  set bibliography(style: "gb-7714-2015-numeric")
   
   show heading: it => box(width: 100%)[
     #v(0.50em)
