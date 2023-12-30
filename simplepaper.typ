@@ -13,6 +13,7 @@
   // Moidfy the following to change the font.
   let title-font = hei
   let author-font = kai
+  let organization-font = kai
   let body-font = song
   let heading-font = xbsong
   let caption-font = kai
@@ -21,7 +22,7 @@
   let emph-font = kai
   let raw-font = code
   
-  set document(author: authors, title: title)
+  set document(author: authors.map(author => author.name), title: title)
   set page(numbering: "1", number-align: center, header: align(left)[
     #set text(font: header-font)
     #title
@@ -54,17 +55,30 @@
     #v(0.5em)
   ]
 
-  // Author information.
-  pad(
-    top: 0.5em,
-    bottom: 0.5em,
-    x: 2em,
+  // Display the authors list.
+  for i in range(calc.ceil(authors.len() / 3)) {
+    let end = calc.min((i + 1) * 3, authors.len())
+    let is-last = authors.len() == end
+    let slice = authors.slice(i * 3, end)
     grid(
-      columns: (1fr,) * calc.min(3, authors.len()),
-      gutter: 1em,
-      ..authors.map(author => align(center, text(font: author-font, author))),
-    ),
-  )
+      columns: slice.len() * (1fr,),
+      gutter: 12pt,
+      ..slice.map(author => align(center, {
+        text(12pt, author.name, font: author-font)
+        if "organization" in author [
+          \ #text(font: organization-font)[#emph(author.organization)]
+        ]
+        if "email" in author [
+          \ #link("mailto:" + author.email)
+        ]
+      }))
+    )
+
+    if not is-last {
+      v(16pt, weak: true)
+    }
+  }
+  v(2em, weak: true)
 
   // Main body
   set par(first-line-indent: 2em)

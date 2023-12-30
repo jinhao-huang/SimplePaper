@@ -1,13 +1,22 @@
 #import "simplepaper.typ": *
 
 #show: project.with(
-  title: "SimplePaper 中文模板使用说明",
+  title: "SimplePaper 模版使用说明",
   authors: (
-    "张三",
+    (
+      name: "张三",
+      organization: [Typst 研究中心],
+      email: "zs@typst.app"
+    ),
+    (
+      name: "李四",
+      organization: [Rust 研究中心],
+      email: "ls@typst.app"
+    ),
   ),
-  abstract: "这是一个简单的论文模板使用说明",
+  abstract: "本文详细描述了 SimplePaper 模版的使用方法。",
   keywords: (
-    "论文",
+    "Typst",
     "模板",
     "使用说明",
   ),
@@ -22,8 +31,6 @@ SimplePaper#cite(<SimplePaper>) 是 Typst 的模版，用于生成简单的论�
 模版默认使用的字体包括 "FZShuSong-Z01", "FZXiaoBiaoSong-B05", "FZHei-B01", "FZKai-Z03", "DejaVu Sans Mono"，如果你在本地编译，需要在方正官网安装这些字体。
 
 如果你的系统没有安装这些字体或想更换其他字体，你需要在模版中修改字体。
-
-我们提供了一个 Typst 的#link("https://typst.app/project/rTNVUul26WZq12qs3kbD25")[在线模板]，你可以复制这个模板到你的工作区后在线编辑。*注意：由于模版包括了上述的字体文件，模板的大小可能较大。*
 
 = 使用示例 <example>
 
