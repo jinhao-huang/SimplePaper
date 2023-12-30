@@ -69,6 +69,7 @@
   // Main body
   set par(first-line-indent: 2em)
   set enum(indent: 2em)
+  set list(indent: 2em)
   set figure(gap: 0.8cm)
 
   show figure: it => [
