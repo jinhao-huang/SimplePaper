@@ -112,7 +112,7 @@
     inset: 10pt,
   )
 
-  show raw: set text(font: (raw-font, hei), size: 10pt)
+  show raw: set text(font: (raw-font, hei))
   show link: underline
   show link: set text(blue)
 
