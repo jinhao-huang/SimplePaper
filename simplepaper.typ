@@ -71,22 +71,36 @@
   set enum(indent: 2em)
   set figure(gap: 0.8cm)
 
+  // 定义空白段，解决首段缩进问题
+  let blank_par = par()[#text()[#v(0em, weak: true)];#text()[#h(0em)]]
+
   show figure: it => [
     #v(12pt)
     #set text(font: caption-font)
     #it
-    #par()[#text(size: 0.0em)[#h(0.0em)]]
+    #blank_par
     #v(12pt)
   ]
 
   show image: it => [
     #it
-    #par()[#text(size: 0.0em)[#h(0.0em)]]
+    #blank_par
+  ]
+
+  show list: it => [
+    #it
+    #blank_par
+  ]
+
+  show enum: it => [
+    #it
+    #blank_par
   ]
 
   show table: it => [
     #set text(font: body-font)
     #it
+    #blank_par
   ]
   show strong: set text(font: strong-font)
   show emph: set text(font: emph-font)
