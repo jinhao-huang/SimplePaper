@@ -5,22 +5,25 @@
   keywords: (),
   body
 ) = {
-  let song = "FZShuSong-Z01"
-  let hei = "FZHei-B01"
-  let kai = "FZKai-Z03"
-  let xbsong = "FZXiaoBiaoSong-B05"
-  let code = "DejaVu Sans Mono"
+  let zh_shusong = ("FZShuSong-Z01",)
+  let zh_xiaobiansong = ("FZXiaoBiaoSong-B05S",)
+  let zh_kai = ("FZKai-Z03",)
+  let zh_hei = ("FZHei-B01",)
+  let zh_fangsong = ("FZFangSong-Z02",)
+  let en_sans_serif = "Georgia"
+  let en_serif = "Times New Roman"
+  let en_typewriter = "Courier New"
+  let en_code = "Menlo"
   // Moidfy the following to change the font.
-  let title-font = hei
-  let author-font = kai
-  let organization-font = kai
-  let body-font = song
-  let heading-font = xbsong
-  let caption-font = kai
-  let header-font = kai
-  let strong-font = hei
-  let emph-font = kai
-  let raw-font = code
+  let title-font = (en_sans_serif, ..zh_hei)
+  let author-font = (en_typewriter, ..zh_fangsong)
+  let body-font = (en_serif, ..zh_shusong)
+  let heading-font = (..zh_xiaobiansong)
+  let caption-font = (en_sans_serif, ..zh_kai)
+  let header-font = (en_sans_serif, ..zh_kai)
+  let strong-font = (en_serif, ..zh_hei)
+  let emph-font = (en_serif, ..zh_kai)
+  let raw-font = (en_code, ..zh_hei)
   
   set document(author: authors.map(author => author.name), title: title)
   set page(numbering: "1", number-align: center, header: align(left)[
@@ -51,7 +54,7 @@
 
   // Title
   align(center)[
-    #block(text(font: title-font, weight: 700, 1.75em, title))
+    #block(text(font: title-font, weight: "bold", 1.75em, title))
     #v(0.5em)
   ]
 
@@ -66,10 +69,10 @@
       ..slice.map(author => align(center, {
         text(12pt, author.name, font: author-font)
         if "organization" in author [
-          \ #text(font: organization-font)[#emph(author.organization)]
+          \ #text(author.organization, font: author-font)
         ]
         if "email" in author [
-          \ #link("mailto:" + author.email)
+          \ #text(link("mailto:" + author.email), font: author-font)
         ]
       }))
     )
@@ -112,7 +115,7 @@
     inset: 10pt,
   )
 
-  show raw: set text(font: (raw-font, hei))
+  show raw: set text(font: raw-font)
   show link: underline
   show link: set text(blue)
 

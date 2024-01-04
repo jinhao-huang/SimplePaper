@@ -5,12 +5,12 @@
   authors: (
     (
       name: "张三",
-      organization: [Typst 研究中心],
+      organization: [Typst Group],
       email: "zs@typst.app"
     ),
     (
       name: "李四",
-      organization: [Rust 研究中心],
+      organization: [Rust Group],
       email: "ls@typst.app"
     ),
   ),
