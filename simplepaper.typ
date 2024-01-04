@@ -72,34 +72,35 @@
   set figure(gap: 0.8cm)
 
   // 定义空白段，解决首段缩进问题
-  let addblankpar = par()[#text(size: 0.0em)[#h(0.0em)]]
+  let blank_par = par()[#text()[#v(0em, weak: true)];#text()[#h(0em)]]
 
   show figure: it => [
     #v(12pt)
     #set text(font: caption-font)
     #it
-    #addblankpar
+    #blank_par
     #v(12pt)
   ]
 
   show image: it => [
     #it
-    #addblankpar
+    #blank_par
   ]
 
-  show list : it => [
+  show list: it => [
     #it
-    #addblankpar
+    #blank_par
   ]
 
-  show enum : it => [
+  show enum: it => [
     #it
-    #addblankpar
+    #blank_par
   ]
 
   show table: it => [
     #set text(font: body-font)
     #it
+    #blank_par
   ]
   show strong: set text(font: strong-font)
   show emph: set text(font: emph-font)
