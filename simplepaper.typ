@@ -5,11 +5,11 @@
   keywords: (),
   body
 ) = {
-  let zh_shusong = ("FZShuSong-Z01",)
-  let zh_xiaobiansong = ("FZXiaoBiaoSong-B05S",)
-  let zh_kai = ("FZKai-Z03",)
-  let zh_hei = ("FZHei-B01",)
-  let zh_fangsong = ("FZFangSong-Z02",)
+  let zh_shusong = ("FZShuSong-Z01", "FZShuSong-Z01S")
+  let zh_xiaobiansong = ("FZXiaoBiaoSong-B05", "FZXiaoBiaoSong-B05S")
+  let zh_kai = ("FZKai-Z03", "FZKai-Z03S")
+  let zh_hei = ("FZHei-B01", "FZHei-B01S")
+  let zh_fangsong = ("FZFangSong-Z02", "FZFangSong-Z02")
   let en_sans_serif = "Georgia"
   let en_serif = "Times New Roman"
   let en_typewriter = "Courier New"
