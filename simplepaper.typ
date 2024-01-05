@@ -129,6 +129,11 @@
     inset: 10pt,
   )
 
+  show raw.where(block: true): it => [
+    #it
+    #blank_par
+  ]
+
   show raw: set text(font: raw-font)
   show link: underline
   show link: set text(blue)
