@@ -24,6 +24,8 @@ SimplePaper 是 [Typst](https://github.com/typst/typst) 的模版，用于编写
 
 ## 模版效果
 
-![example-1](images/example-1.png)
+![example-1](examples/output/example-1.png)
 
-![example-2](images/example-2.png)
+![example-2](examples/output/example-2.png)
+
+![example-3](examples/output/example-3.png)
