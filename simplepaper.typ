@@ -15,12 +15,12 @@
   let en_typewriter = "Courier New"
   let en_code = "Menlo"
   // Moidfy the following to change the font.
-  let title-font = (en_sans_serif, ..zh_hei)
+  let title-font = (en_serif, ..zh_hei)
   let author-font = (en_typewriter, ..zh_fangsong)
   let body-font = (en_serif, ..zh_shusong)
-  let heading-font = (..zh_xiaobiansong)
-  let caption-font = (en_sans_serif, ..zh_kai)
-  let header-font = (en_sans_serif, ..zh_kai)
+  let heading-font = (en_serif, ..zh_xiaobiansong)
+  let caption-font = (en_serif, ..zh_kai)
+  let header-font = (en_serif, ..zh_kai)
   let strong-font = (en_serif, ..zh_hei)
   let emph-font = (en_serif, ..zh_kai)
   let raw-font = (en_code, ..zh_hei)
