@@ -6,7 +6,7 @@ SimplePaper 是 [Typst](https://github.com/typst/typst) 的模版，用于编写
 
 ### 如何使用
 
-下载 [simplepaper.typ](https://github.com/1bitbool/SimplePaper/blob/main/simplepaper.typ) 到本地，参考 [example.typ](https://github.com/1bitbool/SimplePaper/blob/main/examples/example.typ) 进行编写即可。
+下载 [simplepaper.typ](https://github.com/1bitbool/SimplePaper/blob/main/simplepaper.typ) 到本地，可以参考仓库中的示例 [论文示例](https://github.com/1bitbool/SimplePaper/blob/main/examples/example.typ) [作业示例](https://github.com/1bitbool/SimplePaper/blob/main/examples/homework.typ) 进行编写即可。
 
 ### 字体
 
@@ -24,8 +24,18 @@ SimplePaper 是 [Typst](https://github.com/typst/typst) 的模版，用于编写
 
 ## 模版效果
 
+### 论文效果
+
 ![example-1](examples/output/example-1.png)
 
 ![example-2](examples/output/example-2.png)
 
 ![example-3](examples/output/example-3.png)
+
+### 作业效果
+
+![homework-1](examples/output/homework-1.png)
+
+![homework-2](examples/output/homework-2.png)
+
+![homework-3](examples/output/homework-3.png)
