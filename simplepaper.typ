@@ -106,11 +106,17 @@
   ]
 
   show list: it => [
+    // Temporarily fix problme that list index sink.
+    // Removed after Typst fix it.
+    #set text(font: (..zh_shusong))
     #it
     #blank_par
   ]
 
   show enum: it => [
+    // Temporarily fix problme that list index sink.
+    // Removed after Typst fix it.
+    #set text(font: (..zh_shusong))
     #it
     #blank_par
   ]
