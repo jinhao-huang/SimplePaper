@@ -40,7 +40,7 @@
     #if it.numbering != none { counter(heading).display() }
     #h(0.75em)
     #it.body
-]
+  ]
 
   show heading.where(
     level: 1
