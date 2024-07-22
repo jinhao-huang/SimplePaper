@@ -84,7 +84,6 @@
   v(2em, weak: true)
 
   // Main body
-  set par(first-line-indent: 2em)
   set enum(indent: 2em)
   set list(indent: 2em)
   set figure(gap: 0.8cm)
@@ -137,6 +136,7 @@
   show raw: set text(font: raw-font)
   show link: underline
   show link: set text(blue)
+  set par(first-line-indent: 2em, justify: true)
 
   if abstract != none [
     #v(2pt)
