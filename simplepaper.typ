@@ -114,6 +114,11 @@
     #blank_par
   ]
 
+  show terms: it => [
+    #it
+    #blank_par
+  ]
+
   show math.equation.where(block: true): it => [
     #it
     #blank_par
@@ -124,6 +129,7 @@
     #it
     #blank_par
   ]
+
   show strong: set text(font: strong-font)
   show emph: set text(font: emph-font)
   show ref: set text(red)
