@@ -114,6 +114,11 @@
     #blank_par
   ]
 
+  show math.equation.where(block: true): it => [
+    #it
+    #blank_par
+  ]
+
   show table: it => [
     #set text(font: body-font)
     #it
