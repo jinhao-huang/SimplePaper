@@ -164,7 +164,7 @@
 #let problem-counter = counter("problem")
 #problem-counter.step()
 
-#let problem(body) = {
+#let problem(body) = context({
   problem-counter.step()
   set enum(numbering: "(1)")
   block(
@@ -173,7 +173,7 @@
     radius: 2pt,
     width: 100%,
   )[*题目 #problem-counter.display().* #h(0.75em) #body]
-}
+})
 
 #let solution(body) = {
   set enum(numbering: "(1)")
