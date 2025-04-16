@@ -161,19 +161,19 @@
 
   body
 }
-#let problem-counter = counter("problem")
-#problem-counter.step()
 
-#let problem(body) = context({
-  problem-counter.step()
-  set enum(numbering: "(1)")
-  block(
+#let problem-counter = counter("problem")
+#let problem(body) = block(
     fill: rgb(241, 241, 255),
     inset: 8pt,
     radius: 2pt,
     width: 100%,
-  )[*题目 #problem-counter.display().* #h(0.75em) #body]
-})
+  )[
+    #problem-counter.step()
+    *题目 #context problem-counter.display().* 
+    #h(0.75em) 
+    #body
+  ]
 
 #let solution(body) = {
   set enum(numbering: "(1)")
